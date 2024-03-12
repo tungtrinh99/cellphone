@@ -1,0 +1,35 @@
+root: true
+env: { browser: true, node: true }
+parser: "vue-eslint-parser"
+parserOptions:
+  {
+    parser: { "js": "espree", "ts": "@typescript-eslint/parser", "<template>": "espree" },
+    sourceType: "module",
+    ecmaVersion: "latest",
+  }
+plugins: ["@typescript-eslint"]
+extends:
+  [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:nuxt/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:prettier/recommended",
+  ]
+rules:
+  {
+    "vue/script-setup-no-uses-vars": "off",
+    "vue/multi-word-component-names": "off",
+    "vue/html-quotes": ["error", "double"],
+    "semi": ["error", "never"],
+    "vue/require-explicit-emits": "error",
+    "vue/no-spaces-around-equal-signs-in-attribute": "off",
+    "vue/comma-dangle": "off",
+    "vue/prop-name-casing": ["error", "camelCase"],
+    "vue/require-prop-types": ["error"],
+    "vue/component-tags-order": ["error", { order: [["template", "script", "style"]] }],
+    "vue/max-attributes-per-line": ["error", { "singleline": { "max": 4 }, "multiline": { "max": 1 } }],
+    "vue/html-self-closing": "off",
+    "no-useless-catch": "off",
+    "vue/component-name-in-template-casing": ["error", "PascalCase", { registeredComponentsOnly: true }],
+    "@typescript-eslint/no-explicit-any": "off",
+  }

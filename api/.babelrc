@@ -1,0 +1,16 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "root": ["./src"],
+                "alias": {
+                    "@": "./src"
+                    // Thêm các alias khác nếu cần
+                },
+                "extensions": [".js"]
+            }
+        ]
+    ]
+}
