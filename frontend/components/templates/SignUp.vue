@@ -1,0 +1,20 @@
+<template>
+	<div class="template-login">
+		<div class="background">
+			<img :src="LoginBackground" alt="login-background">
+		</div>
+		<RegisterForm />
+	</div>
+</template>
+<script setup lang="ts">
+import LoginBackground from "@/assets/images/login.png";
+import RegisterForm from "~/components/organisms/RegisterForm.vue";
+</script>
+<style lang="scss" scoped>
+.template-login {
+	padding: 60px 0 140px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+</style>
