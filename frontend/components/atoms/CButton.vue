@@ -17,7 +17,6 @@ const props = defineProps({
   type: {
     type: String as PropType<ButtonType>,
     default: "primary",
-    required: true
   },
   className: {
     type: String,
@@ -32,15 +31,17 @@ const emit = defineEmits(['onClick'])
 
 </script>
 <style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
 .button {
   height: 50px;
   color: #FFF;
   text-align: center;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 38px;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -72,7 +73,8 @@ const emit = defineEmits(['onClick'])
   }
 
   &:hover {
-    opacity: 0.8;
+    //background-color: $color_button_hover !important;
+		opacity: 0.7;
   }
 }
 </style>
